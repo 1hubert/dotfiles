@@ -14,6 +14,20 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# brightness control with brillo
+XF86MonBrightnessUp
+	brillo -qA 5
+XF86MonBrightnessDown
+	brillo -qU 5
+
+# volume control with amixer
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+XF86AudioLowerVolume
+	amixer set Master 5%-
+XF86AudioMute
+	amixer set Master toggle
+
 #
 # bspwm hotkeys
 #
@@ -119,9 +133,3 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# Brightness control with brillo
-XF86MonBrightnessDown
-	brillo -qU 5
-XF86MonBrightnessUp
-	brillo -qA 5
