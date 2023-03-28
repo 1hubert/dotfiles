@@ -2,8 +2,6 @@
 My configuration files for Manjaro Linux.
 
 ## Info
-<embed src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Manjaro-logo.svg" align="right" width="450">
-
 |Distro|[Manjaro](https://manjaro.org/)|
 |:---:|:---:|
 |WM|[BSPWM](https://github.com/baskerville/bspwm)|
