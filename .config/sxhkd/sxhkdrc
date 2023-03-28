@@ -32,6 +32,10 @@ XF86AudioMute
 super + v
 	gpaste-client ui
 
+# open file explorer
+super + e
+	dolphin
+
 #
 # bspwm hotkeys
 #
