@@ -19,5 +19,6 @@ bspc rule -a Screenkey manage=off
 
 # AutoStart
 picom &  # compositor
+lxpolkit &  # system-wide privileges control
 feh --bg-fill --randomize Pictures/wallpapers/*  # wallpaper
 $HOME/.config/polybar/launch.sh
