@@ -28,6 +28,10 @@ XF86AudioLowerVolume
 XF86AudioMute
 	amixer set Master toggle
 
+# open clipboard manager
+super + v
+	gpaste-client ui
+
 #
 # bspwm hotkeys
 #
