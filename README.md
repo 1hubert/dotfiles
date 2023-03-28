@@ -13,3 +13,4 @@ My configuration files for Manjaro Linux.
 |Music Player|[cmus](https://archlinux.org/packages/community/x86_64/cmus/)|
 |File Manager|[Dolphin](https://archlinux.org/packages/extra/x86_64/dolphin/)|
 |Shell|[Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)|
+|Code Editor|[VSC](https://archlinux.org/packages/community/x86_64/code/)|
