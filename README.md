@@ -14,3 +14,4 @@ My configuration files for Manjaro Linux.
 |File Manager|[Dolphin](https://archlinux.org/packages/extra/x86_64/dolphin/)|
 |Shell|[Zsh](https://archlinux.org/packages/extra/x86_64/zsh/)|
 |Code Editor|[VSC](https://archlinux.org/packages/community/x86_64/code/)|
+|Screenshot Tool|[flameshot](https://archlinux.org/packages/community/x86_64/flameshot/)|
