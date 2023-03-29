@@ -5,6 +5,7 @@ My configuration files for Manjaro Linux.
 |Distro|[Manjaro](https://manjaro.org/)|
 |:---:|:---:|
 |WM|[bspwm](https://github.com/baskerville/bspwm)|
+|Hotkey Daemon|[sxhkd](https://archlinux.org/packages/community/x86_64/sxhkd/)|
 |Bar|[Polybar](https://github.com/polybar/polybar)|
 |Menu|[dmenu](https://archlinux.org/packages/community/x86_64/dmenu/)|
 |Compositor|[picom](https://archlinux.org/packages/community/x86_64/picom/)|
