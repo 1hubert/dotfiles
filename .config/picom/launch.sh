@@ -7,6 +7,6 @@ killall -q picom
 while pgrep -x picom >/dev/null; do sleep 1; done
 
 # Launch compton
-picom --config /home/taylank/.config/picom/picom.conf &
+picom --config /home/$USER/.config/picom/picom.conf &
 
 
