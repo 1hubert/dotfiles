@@ -1,40 +1,75 @@
 #
-# wm independent hotkeys
+# WM independent hotkeys
 #
 
-# terminal emulator
+# Terminal emulator
 super + Return
-	alacritty
+	xfce4-terminal
 
-# program launcher
-super + @space
-	dmenu_run
+# Program launcher
+super + d
+	rofi -modi drun -show drun -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
+                -show-icons -drun-icon-theme "Qogir-dark" -font "Droid Sans Regular 10"
 
-# make sxhkd reload its configuration files:
+# Show open window
+super + ctrl + d
+	rofi -modi drun -show window -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
+                -show-icons -drun-icon-theme "Qogir-dark" -font "Droid Sans Regular 10"
+
+# Show ssh sesssions
+super + shift + d
+	rofi -modi drun -show ssh -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar -terminal xfce4-terminal \
+                -show-icons -drun-icon-theme "Qogir-dark" -font "Droid Sans Regular 10"
+
+# Power menu
+super + shift + e
+	~/.config/rofi/powermenu.sh
+
+# Reload sxhkd
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# brightness control with brillo
+# Volume control using amixer
+XF86AudioRaiseVolume
+	amixer set Master 5%+ unmute
+XF86AudioLowerVolume
+	amixer set Master 5%- unmute
+XF86AudioMute
+	amixer -D pulse sset Master toggle-mute
+	# amixer set Master toggle
+
+# Brightness control using brillo
 XF86MonBrightnessUp
 	brillo -qA 5
 XF86MonBrightnessDown
 	brillo -qU 5
 
-# volume control with amixer
-XF86AudioRaiseVolume
-	amixer set Master 5%+
-XF86AudioLowerVolume
-	amixer set Master 5%-
-XF86AudioMute
-	amixer set Master toggle
+# Full screenshot
+Print
+	flameshot full --clipboard --path "$(xdg-user-dir PICTURES)/screenshot-$(date +%F_%T).png"
+
+# Area screenshot
+super + Print
+	flameshot gui --clipboard --path "$(xdg-user-dir PICTURES)/screenshot-$(date +%F_%T).png"
+
+# Open web browser
+super + b
+	brave
+
+# Open file explorer
+super + e
+	thunar  
+
+# List available keybindings
+super + F1
+	~/.config/bspwm/scripts/keybindings_rofi.sh
 
 # open clipboard manager
 super + v
 	gpaste-client ui
-
-# open file explorer
-super + e
-	dolphin
 
 #
 # bspwm hotkeys
@@ -45,7 +80,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }c
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -81,8 +116,8 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+# super + {p,b,comma,period}
+# 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
