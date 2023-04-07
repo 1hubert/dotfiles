@@ -1,5 +1,5 @@
-# manjaro-linux-config
-My configuration files for Manjaro Linux.
+# dotfiles
+My configuration files for EndeavourOS Linux.
 
 ## Info
 |Distro|[EndeavourOS](https://endeavouros.com/)|
